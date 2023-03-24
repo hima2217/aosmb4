@@ -27,7 +27,7 @@ public class FragmentFirst extends Fragment {
         List<Doctor> itemList = new ArrayList<Doctor>();
         ListView listView = view.findViewById(R.id.listview);
 
-        for(int i = 0; i < 200; i++) {
+        for(int i = 0; i < 300; i++) {
             Doctor doctor = new Doctor();
             doctor.setAvatar(R.drawable.ava);
             doctor.setDoctorname("Фамилия имя отчество Специальность ");
@@ -35,7 +35,6 @@ public class FragmentFirst extends Fragment {
         }
 
         YourCustomListAdapter yourcustomlistadapter = new YourCustomListAdapter(getContext(), R.layout.elementoflist, itemList);
-
 
         listView.setAdapter(yourcustomlistadapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
